@@ -1,5 +1,6 @@
 import heapq
 
+
 class Graph:
     def __init__(self):
         self.edges = {}
@@ -14,6 +15,7 @@ class Graph:
         self.edges[to_vertex].append((from_vertex, weight))
         self.vertices.add(from_vertex)
         self.vertices.add(to_vertex)
+
 
 def dijkstra(graph, start_vertex):
     # Ініціалізація відстаней та попередників
@@ -39,6 +41,7 @@ def dijkstra(graph, start_vertex):
                 shortest_path_tree[neighbor] = current_vertex
 
     return distances, shortest_path_tree
+
 
 # Створення графа та додавання ребер
 graph = Graph()
